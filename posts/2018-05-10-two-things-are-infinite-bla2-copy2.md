@@ -16,7 +16,6 @@ asdhiasuhdiauhsidhaiusd
 
 ![Photo description](/assets/img/desert.jpg)
 
-
 adasdasdasdasdad
 
 ## Lorem Lorem

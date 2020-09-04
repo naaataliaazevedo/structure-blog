@@ -14,6 +14,8 @@ asidhasiduhaisduhaishdiasuhd
 asiduiahdiashdiaushdiuash
 asdhiasuhdiauhsidhaiusd
 
+![Photo description](/assets/img/desert.jpg)
+
 
 adasdasdasdasdad
 

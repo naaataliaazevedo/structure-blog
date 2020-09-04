@@ -42,37 +42,54 @@ exports.createPages = ({ graphql, actions}) => {
               slug
             }
           }
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
     }
   `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach(
-      ({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve("./src/templates/blog-post.js"),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
+    posts.forEach(({ node, next, previous}) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve("./src/templates/blog-post.js"),
+        context: {
+          slug: node.fields.slug,
+          previousPost:next,
+          nextPost: previous,
+        },
       })
+    })
 
-      const postsPerPage = 6
-      const numPages = Math.ceil(posts.length / postsPerPage)
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
 
-      Array.from({ length: numPages}).forEach((_, index) => {
-        createPage({
-          path: index === 0 ? `/` : `/page/${index + 1}`,
-          component: path.resolve("./src/templates/blog-list.js"),
-          context: {
-            limit: postsPerPage,
-            skip: index * postsPerPage,
-            numPages,
-            currentPage: index + 1
-          }
-        })
+    Array.from({ length: numPages }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/` : `/page/${index + 1}`,
+        component: path.resolve("./src/templates/blog-list.js"),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numPages,
+          currentPage: index + 1,
+        },
       })
+    })
   })
 }

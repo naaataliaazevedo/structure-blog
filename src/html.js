@@ -36,7 +36,6 @@ export default function HTML(props) {
                 } catch (err) {}
               }
               setTheme(preferredTheme || 'dark');
-
               window.__onDisplayChange = function() {};
               function setDisplay(newDisplay) {
                 window.__display = newDisplay;

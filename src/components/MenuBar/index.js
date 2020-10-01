@@ -13,8 +13,8 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const isDarkMode = theme === 'dark';
-  const isListMode = theme === 'list';
+  const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
@@ -49,7 +49,7 @@ const MenuBar = () => {
           <Light />
         </S.MenuBarItem>
         <S.MenuBarItem
-          title="Mudar a visualização"
+          title="Mudar visualização"
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}

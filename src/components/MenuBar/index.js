@@ -33,9 +33,13 @@ const MenuBar = () => {
         </S.MenuBarLink>
       </S.MenuBarGroup>
       <S.MenuBarGroup>
-        <S.MenuBarItem title="Mudar o tema" onClick={() => {
-          window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
-        }}>
+        <S.MenuBarItem
+          title="Mudar o tema"
+          onClick={() => {
+            window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
+          }}
+          className={theme}
+        >
           <Light />
         </S.MenuBarItem>
         <S.MenuBarItem title="Mudar a visualização">

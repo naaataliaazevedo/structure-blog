@@ -8,7 +8,7 @@ module.exports = {
     position: `Frontend and Mobile developer`,
     description: `Blog about frontend developer`,
     author: `@nataliaazevedo`,
-    siteUrl: `https://johndoe.com.br`,
+    siteUrl: `https://natazevedo.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
@@ -84,5 +84,6 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }

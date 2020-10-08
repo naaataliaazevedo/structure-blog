@@ -4,6 +4,7 @@ title: Two thing are infinite
 description: Bla bla bla bla.
 category: Misc
 background: "#7aab13"
+image: "/assets/img/desert.jpg"
 ---
 
 # Lorem ipsum

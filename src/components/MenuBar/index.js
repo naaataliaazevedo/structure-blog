@@ -7,6 +7,8 @@ import { LightBulb as Light } from "@styled-icons/octicons/LightBulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ListUl as List } from "@styled-icons/boxicons-regular/ListUl"
 
+import getThemeColor from "../../utils/getThemeColor"
+
 import * as S from "./styled"
 
 const MenuBar = () => {
@@ -27,12 +29,26 @@ const MenuBar = () => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink to="/" title="Voltar para Home">
+        <S.MenuBarLink
+          to="/"
+          title="Voltar para Home"
+          cover
+          direction="right"
+          duration={0.6}
+          bg={getThemeColor()}
+        >
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
-        <S.MenuBarLink to="/search/" title="Pesquisar">
+        <S.MenuBarLink
+          to="/search/"
+          title="Pesquisar"
+          cover
+          direction="right"
+          duration={0.6}
+          bg={getThemeColor()}
+        >
           <S.MenuBarItem>
             <Search />
           </S.MenuBarItem>

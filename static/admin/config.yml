@@ -2,7 +2,7 @@ backend:
   name: github
   repo: naaataliaazevedo/blog-structure
   branch: master
-  site_domain: http://www.natazevedo.com.br/
+  #site_domain: http://www.natazevedo.com.br/
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"

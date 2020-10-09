@@ -41,7 +41,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
-    "prettier": "2.0.5",
+    "prettier": "2.1.2",
     "styled-icons": "^10.18.0"
   },
   "keywords": [

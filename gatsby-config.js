@@ -40,7 +40,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: "gatsby-remark-relative-images-v2",
             options: {
               name: "uploads",
             },
@@ -57,17 +57,18 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-algolia`,
+      resolve: `gatsby-plugin-algolia-search`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
         chunkSize: 10000,
-        // enablePartialUpdates: true,
+        enablePartialUpdates: true,
       },
     },
     {
